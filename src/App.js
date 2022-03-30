@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect} from 'react';
 import SearchBar from './Components/SearchBar/SearchBar';
 import axios from "axios";
+import Graph from "./Components/Graph/Graph"
 
 function App() {
 
@@ -43,6 +44,10 @@ function App() {
 
       <div>
         <SearchBar filterGames={filterGames}/>
+      </div>
+
+      <div>
+        <Graph displayGames={displayGames}/>
       </div>
     
     </div>
