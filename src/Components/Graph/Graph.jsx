@@ -13,7 +13,7 @@ const Graph = (props) => {
     });
 
     setGraphData(tempGraphData);
-    }, [props.games])
+    }, [props.displayGames])
 
     console.log(graphData)
 
