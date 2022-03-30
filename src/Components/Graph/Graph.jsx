@@ -11,8 +11,9 @@ const Graph = (props) => {
     let tempGraphData = props.displayGames.map(game => {
         return [game.platform, game.globalSales];
     });
+
     setGraphData(tempGraphData);
-    },[props.games])
+    }, [props.games])
 
     console.log(graphData)
 
@@ -48,7 +49,7 @@ const Graph = (props) => {
         chartType="BarChart"
         width="100%"
         height="400px"
-        data={[[]]}
+        data={[["Platform", "GlobalSales"], ...graphData]}
        
       />
 
