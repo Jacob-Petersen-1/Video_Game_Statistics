@@ -1,5 +1,7 @@
 import './App.css';
 import React, { useState, useEffect} from 'react';
+import SearchBar from './Components/SearchBar/SearchBar';
+import axios from "axios";
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
 
   async function getAllGames(){
     let response = await axios.get('https://localhost:7260/api/games');
-    setSongs(response.data)
+    setGames(response.data)
     setDisplayGames(response.data)
     console.log(response.data)
   }
@@ -33,7 +35,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
+      <header>
+        <h1>VideoGame Query Machine</h1>
+      </header>
+
+      <div>
+        <SearchBar filterGames={filterGames}/>
+      </div>
     
     </div>
   );
