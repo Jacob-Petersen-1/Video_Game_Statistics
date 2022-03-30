@@ -32,6 +32,7 @@ function App() {
     })
 
     setDisplayGames(matchingGames)
+    console.log(matchingGames)
   }
 
   return (
