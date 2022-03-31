@@ -4,33 +4,23 @@ import { Chart } from 'react-google-charts'
 
 const DisplayBestConsole = (props) => {
     
-    const [graphDataConsole, setGraphDataConsole] = useState([]);
+    const [graphDataPlatforms, setGraphDataPlatforms] = useState([]);
     
     
     
     useEffect(() =>{
-        let tempGraphDataConsole = props.games.filter(function(el){
+        let tempGraphDataPlatforms = props.games.filter(function(el){
             return el.year >= 2013;
         }).map(g => {
-        return g.platform;
+        return [g.platform,g.globalSales];
     });
-    let cleanData = removeDuplicates(tempGraphDataConsole);
-    setGraphDataConsole(cleanData);
+    console.log(tempGraphDataPlatforms)
+    setGraphDataPlatforms(tempGraphDataPlatforms);
     }, [props.games])
     
-    console.log(graphDataConsole)
+    console.log(graphDataPlatforms)
 
-    function removeDuplicates(arr) {
-        var unique = arr.reduce(function (acc, curr) {
-            if (!acc.includes(curr))
-                acc.push(curr);
-            return acc;
-        }, []);
-        return unique;
-    }
-
-   
-
+  
     
     
     
@@ -62,6 +52,15 @@ const DisplayBestConsole = (props) => {
 
 }
  
-export default DisplayBestConsole
+export default DisplayBestConsole;
 
-;
+
+//notes  // function removeDuplicates(arr) {
+    //     var unique = arr.reduce(function (acc, curr) {
+    //         if (!acc.includes(curr))
+    //             acc.push(curr);
+    //         return acc;
+    //     }, []);
+    //     return unique;
+    // }
+   
