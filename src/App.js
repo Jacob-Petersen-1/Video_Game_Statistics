@@ -3,6 +3,7 @@ import React, { useState, useEffect} from 'react';
 import SearchBar from './Components/SearchBar/SearchBar';
 import axios from "axios";
 import Graph from "./Components/Graph/Graph";
+import DisplayBestConsole from './Components/DisplayBestConsole/DisplayBestConsole';
 
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
 
       <div>
         <Graph displayGames={displayGames}/>
+      </div>
+      <div>
+        <DisplayBestConsole games={games}/>
       </div>
 
     

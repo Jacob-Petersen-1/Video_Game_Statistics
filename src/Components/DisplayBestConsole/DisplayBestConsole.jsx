@@ -4,40 +4,59 @@ import { Chart } from 'react-google-charts'
 
 const DisplayBestConsole = (props) => {
     
-    const [graphData, setGraphData] = useState([]);
+    const [graphDataConsole, setGraphDataConsole] = useState([]);
     
-    useEffect(() => {
-    let tempGraphData = props.games.map(game => {
-        return [game.platform, game.globalSales, game.year >= 2013];
-
+    
+    
+    useEffect(() =>{
+        let tempGraphDataConsole = props.games.filter(function(el){
+            return el.year >= 2013;
+        }).map(g => {
+        return g.platform;
     });
-
-    setGraphData(tempGraphData);
+    let cleanData = removeDuplicates(tempGraphDataConsole);
+    setGraphDataConsole(cleanData);
     }, [props.games])
+    
+    console.log(graphDataConsole)
 
-    console.log(graphData)
+    function removeDuplicates(arr) {
+        var unique = arr.reduce(function (acc, curr) {
+            if (!acc.includes(curr))
+                acc.push(curr);
+            return acc;
+        }, []);
+        return unique;
+    }
 
-    const data = [
-        
-        
-      ];
-      
+   
+
+    
+    
+    
+    
+    
+    
+    
     const options = {
-        title: "Best Selling consoles since 2013",
-        curveType: "function",
-        legend: { position: "bottom" },
+        title: "Best Console Global Sales Since 2013",
+        width: 600,
+        height: 400,
+        bar: { groupWidth: "95%" },
+        legend: { position: "none" },
       };
     
-    
     return ( 
-
-        <Chart
-        chartType="LineChart"
-        width="100%"
-        height="400px"
-        data={[["Platform",], ...graphData]}
-        options={options}
-      />
+        <h1>test</h1>
+    //     <Chart
+    //   chartType="BarChart"
+    //   width="100%"
+    //   height="400px"
+    //   data={[["Platform","Global Sales"],...graphDataConsole]}
+    //   options={options}
+    
+    //     />
+    
     );
 
 
