@@ -14,11 +14,11 @@ const DisplayBestConsole = (props) => {
         }).map(g => {
         return [g.platform,g.globalSales];
     });
-    console.log(tempGraphDataPlatforms)
     setGraphDataPlatforms(tempGraphDataPlatforms);
     }, [props.games])
-    
     console.log(graphDataPlatforms)
+
+    
 
   
     
