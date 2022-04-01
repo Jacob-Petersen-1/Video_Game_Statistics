@@ -4,6 +4,7 @@ import SearchBar from './Components/SearchBar/SearchBar';
 import axios from "axios";
 import Graph from "./Components/Graph/Graph";
 import DisplayBestConsole from './Components/DisplayBestConsole/DisplayBestConsole';
+import DisplayAndSelectData from './Components/DisplayAndSelectData/DisplayAndSelectData';
 
 
 function App() {
@@ -53,6 +54,10 @@ function App() {
       </div>
       <div>
         <DisplayBestConsole games={games}/>
+      </div>
+
+      <div>
+        <DisplayAndSelectData games={games}/>
       </div>
 
     
