@@ -6,6 +6,7 @@ import Graph from "./Components/Graph/Graph";
 import DisplayBestConsole from "./Components/DisplayBestConsole/DisplayBestConsole";
 import DisplayAndSelectData from "./Components/DisplayAndSelectData/DisplayAndSelectData";
 import TopBar from "./Components/TopBar/TopBar";
+import SampleEvaluation from "./Components/SampleEvaluation/SampleEvaulation";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -50,6 +51,10 @@ function App() {
           <h2> Best Total Global Game Sales Per Platform Since 2013</h2>
           <div className="bar-chart">
             <DisplayBestConsole games={games} />
+          </div>
+
+          <div className="bar-chart">
+            <SampleEvaluation games={games}/>
           </div>
         </div>
       </div>
