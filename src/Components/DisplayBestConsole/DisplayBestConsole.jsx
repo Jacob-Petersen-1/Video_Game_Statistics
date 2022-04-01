@@ -5,6 +5,8 @@ import { Chart } from 'react-google-charts'
 const DisplayBestConsole = (props) => {
     
     const [graphDataPlatforms, setGraphDataPlatforms] = useState([]);
+    const [platformData, setPlatformData] = useState([]);
+    const game = props.game
     
     
     
@@ -12,16 +14,29 @@ const DisplayBestConsole = (props) => {
         let tempGraphDataPlatforms = props.games.filter(function(el){
             return el.year >= 2013;
         }).map(g => {
-        return [g.platform,g.globalSales];
+        return [g.platform];
     });
+
+
     setGraphDataPlatforms(tempGraphDataPlatforms);
     }, [props.games])
     console.log(graphDataPlatforms)
 
     
+    function getPlatformSalesData (tempGraphDataPlatforms){
+        const removeDuplicates = tempGraphDataPlatforms.map(game=>game.platform);
+        const platform = [...new Set(removeDuplicates)]
 
-  
-    
+        let platformsGlobalSales = platform.map(platform=> {
+            let platformDataSet ={
+                platform: platform,
+                globalSales: tempGraphDataPlatforms.filter(game=>game.platform === platform).map(game.globalSales).reduce((a, b) => a + b, 0)
+            }
+            return platformDataSet
+        })
+
+        setPlatformData(platformsGlobalSales)
+    }
     
     
     
