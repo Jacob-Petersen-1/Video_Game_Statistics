@@ -53,6 +53,7 @@ function App() {
             <DisplayBestConsole games={games} />
           </div>
 
+          <h2> Best Total Global Game Sales Per Genre</h2>
           <div className="bar-chart">
             <SampleEvaluation games={games}/>
           </div>

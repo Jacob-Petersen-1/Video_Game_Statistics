@@ -10,7 +10,7 @@ const SampleEvaluation = (props) => {
     
     useEffect(() =>{
         let tempGraphDataGenre = props.games.filter(function(el){
-            return el.year >= 2000;
+            return el.year >= 1950;
         })
         getGenreSalesData(tempGraphDataGenre)
     }, [props.games])
