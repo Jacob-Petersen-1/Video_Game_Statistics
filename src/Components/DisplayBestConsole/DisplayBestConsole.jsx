@@ -13,12 +13,8 @@ const DisplayBestConsole = (props) => {
     useEffect(() =>{
         let tempGraphDataPlatforms = props.games.filter(function(el){
             return el.year >= 2013;
-        }).map(g => {
-        return [g.platform];
-    });
-
-
-    setGraphDataPlatforms(tempGraphDataPlatforms);
+        })
+        getPlatformSalesData(tempGraphDataPlatforms)
     }, [props.games])
     console.log(graphDataPlatforms)
 
@@ -38,8 +34,13 @@ const DisplayBestConsole = (props) => {
         setPlatformData(platformsGlobalSales)
     }
     
-    
-    
+    function formatGraph(dataSet){
+        const data = [
+            ["Platform", "Global Sales"],
+            ...dataSet.map(data => [data.platform, data.globalSales])
+        ]
+        return data
+    }
     
     
     
@@ -52,16 +53,12 @@ const DisplayBestConsole = (props) => {
       };
     
     return ( 
-        <h1>test</h1>
-    //     <Chart
-    //   chartType="BarChart"
-    //   width="100%"
-    //   height="400px"
-    //   data={[["Platform","Global Sales"],...graphDataConsole]}
-    //   options={options}
-    
-    //     />
-    
+
+        <div>
+            {platformData.length > 0 &&
+            <div><Chart chartType='ColumnChart' width='100%' height='375px' data={formatGraph(platformData)}/></div>}
+        </div>
+
     );
 
 
