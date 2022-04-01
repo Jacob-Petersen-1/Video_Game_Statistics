@@ -36,7 +36,7 @@ const DisplayBestConsole = (props) => {
     
     function formatGraph(dataSet){
         const data = [
-            ["Platform", "Global Sales"],
+            ["Platform", "Global Sales In Millions"],
             ...dataSet.map(data => [data.platform, data.globalSalesByPlatform])
         ]
         return data

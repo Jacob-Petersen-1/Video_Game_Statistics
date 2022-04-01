@@ -47,7 +47,7 @@ function App() {
           <div className="search-chart">
             <Graph displayGames={displayGames} />
           </div>
-          <h2> Best Total Game Sales Per Platform Since 2013</h2>
+          <h2> Best Total Global Game Sales Per Platform Since 2013</h2>
           <div className="bar-chart">
             <DisplayBestConsole games={games} />
           </div>

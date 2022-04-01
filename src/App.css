@@ -8,11 +8,12 @@ html {
 
 .bar-chart{
     max-width: 100%;
-
+    padding:5px;
 }
 
 .search-chart{
-    max-width: 100%
+    max-width: 100%;
+    padding: 5px;
 }
 
 h2{
