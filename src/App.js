@@ -41,27 +41,33 @@ function App() {
 
   return (
     <div>
-      <header>
         <TopBar/>
-      </header>
+      <div className='page-container'>
+      <div className='center-page'>
+        <div className='search'>
+          <SearchBar filterGames={filterGames}/>
+          <DisplayAndSelectData games={displayGames}/>
+        </div>
+        <div className='search-chart'>
+          <Graph displayGames={displayGames}/>
+        </div>
+        <div class name='barchart'>
+          <DisplayBestConsole games={games}/>
+        </div>
+      </div>
+    </div>
+    </div>
 
-      <div>
-        <SearchBar filterGames={filterGames}/>
-      </div>
+      
 
-      <div>
-        <Graph displayGames={displayGames}/>
-      </div>
-      <div>
-        <DisplayBestConsole games={games}/>
-      </div>
 
-      <div>
-        <DisplayAndSelectData games={displayGames}/>
-      </div>
+      
+      
+
+      
+      
 
     
-    </div>
   );
 }
 

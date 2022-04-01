@@ -1,0 +1,11 @@
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+.barchart{
+    width: 50%;
+}

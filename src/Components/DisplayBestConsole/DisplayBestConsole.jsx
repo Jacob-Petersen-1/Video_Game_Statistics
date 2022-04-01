@@ -56,7 +56,7 @@ const DisplayBestConsole = (props) => {
 
         <div>
             {platformData.length > 0 &&
-            <div><Chart chartType='ColumnChart' width='100%' height='375px' data={formatGraph(platformData)}/></div>}
+            <div><Chart chartType='ColumnChart' width='100%' height='300px' data={formatGraph(platformData)}/></div>}
         </div>
 
     );
