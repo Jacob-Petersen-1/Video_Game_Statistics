@@ -9,7 +9,7 @@ const Graph = (props) => {
     
     useEffect(() => {
     let tempGraphData = props.displayGames.map(game => {
-        return [game.name, game.globalSales, game.northAmericaSales, game.europeSales, game.japanSales];
+        return [game.platform, game.globalSales, game.northAmericaSales, game.europeSales, game.japanSales];
     });
 
     setGraphData(tempGraphData);
