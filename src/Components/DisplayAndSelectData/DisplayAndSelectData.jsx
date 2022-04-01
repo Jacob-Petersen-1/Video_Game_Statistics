@@ -8,7 +8,7 @@ const DisplayAndSelectData = (props) => {
     const games = props.games;
     const displayedGames = pageNumber * gamesPerPage;
     const page = Math.ceil(games.length / gamesPerPage);
-    const nextPage = ({page}) => {setPageNumber(page);}
+    const nextPage = ({selected}) => {setPageNumber(selected);}
 
     return ( 
         <div>
