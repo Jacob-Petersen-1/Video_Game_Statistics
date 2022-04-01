@@ -9,7 +9,7 @@ const Graph = (props) => {
     
     useEffect(() => {
     let tempGraphData = props.displayGames.map(game => {
-        return [game.platform, game.globalSales];
+        return [game.platform, game.globalSales, game.northAmericaSales, game.europeSales, game.japanSales];
     });
 
     setGraphData(tempGraphData);
@@ -49,7 +49,7 @@ const Graph = (props) => {
         chartType="BarChart"
         width="100%"
         height="400px"
-        data={[["Platform", "GlobalSales"], ...graphData]}
+        data={[["Platform", "GlobalSales", "North America Sales", "Europe Sales", "Japan Sales"], ...graphData]}
        
       />
 

@@ -20,8 +20,7 @@ function App() {
   async function getAllGames(){
     let response = await axios.get('https://localhost:7260/api/games');
     setGames(response.data)
-    setDisplayGames(response.data)
-    console.log(response.data)
+    filterGames('Mario Kart')
   }
 
   const filterGames = (searchGame) => {
