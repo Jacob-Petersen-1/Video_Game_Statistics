@@ -5,6 +5,7 @@ import axios from "axios";
 import Graph from "./Components/Graph/Graph";
 import DisplayBestConsole from './Components/DisplayBestConsole/DisplayBestConsole';
 import DisplayAndSelectData from './Components/DisplayAndSelectData/DisplayAndSelectData';
+import TopBar from './Components/TopBar/TopBar'
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>VideoGame Query Machine</h1>
+        <TopBar/>
       </header>
 
       <div>

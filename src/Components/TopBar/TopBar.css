@@ -1,0 +1,26 @@
+
+.topbar-container{
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+}
+
+.logo{
+    color: #FFF;
+    font-family: "Kanit";
+    font-size: 50px;
+}
+
+.topbar-left{
+    flex: 3;
+}
+
+.topbar-image{
+    height: 50px;
+    margin-right: 10px;
+
+}
