@@ -57,7 +57,7 @@ function App() {
       </div>
 
       <div>
-        <DisplayAndSelectData games={games}/>
+        <DisplayAndSelectData games={displayGames}/>
       </div>
 
     
