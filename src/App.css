@@ -6,6 +6,17 @@ html {
     font-family: "Poppins", sans-serif;
   }
 
-.barchart{
-    width: 50%;
+.bar-chart{
+    max-width: 100%;
+
+}
+
+.search-chart{
+    max-width: 100%
+}
+
+h2{
+    background-color: black;
+    color:whitesmoke;
+    margin-top: 15px;
 }
