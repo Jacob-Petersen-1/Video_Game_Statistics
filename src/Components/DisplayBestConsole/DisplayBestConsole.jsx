@@ -26,7 +26,7 @@ const DisplayBestConsole = (props) => {
         let platformsGlobalSales = platform.map(platform=> {
             let platformDataSet ={
                 platform: platform,
-                globalSales: tempGraphDataPlatforms.filter(game=>game.platform === platform).map(game.globalSales).reduce((a, b) => a + b, 0)
+                globalSalesByPlatform: tempGraphDataPlatforms.filter(game=>game.platform === platform).map(game => game.globalSales).reduce((a, b) => a + b, 0)
             }
             return platformDataSet
         })
@@ -37,7 +37,7 @@ const DisplayBestConsole = (props) => {
     function formatGraph(dataSet){
         const data = [
             ["Platform", "Global Sales"],
-            ...dataSet.map(data => [data.platform, data.globalSales])
+            ...dataSet.map(data => [data.platform, data.globalSalesByPlatform])
         ]
         return data
     }
