@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import ReactPaginate from "react-paginate";
+import "./DisplayAndSelectData.css"
 
 const DisplayAndSelectData = (props) => {
 
@@ -42,8 +43,14 @@ const DisplayAndSelectData = (props) => {
                     })}
                 </tbody>
             </table>
-            <div>
-                <ReactPaginate previousLabel="Previous" nextLabel="Next" pageCount={page} onPageChange={nextPage}/>
+            <div className="paginate-container">
+                <ReactPaginate 
+                previousLabel="Previous" 
+                nextLabel="Next" 
+                pageCount={page} 
+                onPageChange={nextPage}
+                />
+
             </div>
         </div>
      );

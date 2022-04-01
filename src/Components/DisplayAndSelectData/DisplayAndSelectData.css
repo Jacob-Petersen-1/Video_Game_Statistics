@@ -1,0 +1,10 @@
+.search-table th,td,th{
+    padding: .2rem;
+    font-weight: bold;
+    padding: .1rem;
+}
+
+.paginate-container{
+    display: flex;
+    align-items:flex-start
+}
