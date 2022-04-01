@@ -49,7 +49,7 @@ const Graph = (props) => {
         chartType="BarChart"
         width="100%"
         height="400px"
-        data={[["Platform", "GlobalSales", "North America Sales", "Europe Sales", "Japan Sales"], ...graphData]}
+        data={[["Platform", "Global Sales", "North America Sales", "Europe Sales", "Japan Sales"], ...graphData]}
        
       />
 

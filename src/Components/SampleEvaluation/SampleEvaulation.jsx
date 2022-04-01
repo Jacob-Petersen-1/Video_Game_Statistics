@@ -24,7 +24,10 @@ const SampleEvaluation = (props) => {
         let genreGlobalSales = platform.map(genre=> {
             let platformDataSet ={
                 genre: genre,
-                globalSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.globalSales).reduce((a, b) => a + b, 0)
+                globalSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.globalSales).reduce((a, b) => a + b, 0),
+                northAmericaSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.northAmericaSales).reduce((a, b) => a + b, 0),
+                europeSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.europeSales).reduce((a, b) => a + b, 0),
+                japanSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.japanSales).reduce((a, b) => a + b, 0)
             }
             return platformDataSet
         })
@@ -34,8 +37,8 @@ const SampleEvaluation = (props) => {
     
     function formatGraph(dataSet){
         const data = [
-            ["Platform", "Global Sales In Millions"],
-            ...dataSet.map(data => [data.genre, data.globalSalesByGenre])
+            ["Genre", "Global Sales In Millions", "North America Sales In Millions", "Europe Sales In Millions", "Japan Sales in Millions"],
+            ...dataSet.map(data => [data.genre, data.globalSalesByGenre, data.northAmericaSalesByGenre, data.europeSalesByGenre, data.japanSalesByGenre])
         ]
         return data
     }
@@ -44,8 +47,8 @@ const SampleEvaluation = (props) => {
     
     const options = {
         title: "Best Console Global Sales Since 2013",
-        width: 600,
-        height: 400,
+        width: 100,
+        height: 800,
         bar: { groupWidth: "95%" },
         legend: { position: "none" },
       };
@@ -54,7 +57,11 @@ const SampleEvaluation = (props) => {
 
         <div>
             {genreData.length > 0 &&
-            <div><Chart chartType='ColumnChart' width='100%' height='300px' data={formatGraph(genreData)}/></div>}
+            <div><Chart 
+            chartType='ColumnChart' 
+            width='100%' 
+            height='300px' 
+            data={formatGraph(genreData)}/></div>}
         </div>
 
     );
