@@ -4,17 +4,12 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 200px;
     width: 100%;
     position: sticky;
 }
 
-.logo{
-    color: #FFF;
-    font-family: "Kanit";
-    font-size: 50px;
-    margin-left: 2rem;
-}
+
 
 .topbar-left{
     flex: 3;
@@ -24,4 +19,9 @@
     height: 50px;
     margin-right: 10px;
 
+}
+
+.logo-image{
+    height: 200px;
+    width:400px;
 }

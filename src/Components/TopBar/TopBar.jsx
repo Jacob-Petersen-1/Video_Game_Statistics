@@ -13,7 +13,7 @@ const TopBar = () => {
     <div className="topbar-container">
         <div className="topbar-left">
             <div className="logo-left">
-                <span className="logo">Video Game Query Machine</span>                
+                <div className="logo"><img src = "/images/Logo.png" className="logo-image" alt = "Video Game Query Logo"></img></div>                
             </div>
         </div>
         <div className="topbar-center">
