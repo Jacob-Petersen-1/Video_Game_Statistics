@@ -67,7 +67,7 @@ function App() {
           </div>
           <h5>According to our data, the best genre for investing/creating games based on sales are Action games.</h5>
           <h5>Action games lead the second most popular genre, Sports, by approximately $414,000,000 globally.</h5>
-          <h5>The only two genres to have more sales in Japan than any other region were Role-Playing and Puzzle games. All other genres follow the same trend of having the most sales in North America, followed by Europe, and then Japan.</h5>
+          <h5>The only genre to have more sales in Japan than any other region was Role-Playing. The only two other genres where sales in Japan beat sales in Europe were Puzzle and Strategy. The rest of the genres follow the same trend of having the most sales in North America, followed by Europe, and then Japan.</h5>
 
           <h2>Most Successful Publisher of All Time</h2>
           <div className="bar-chart">
