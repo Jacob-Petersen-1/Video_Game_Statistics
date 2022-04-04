@@ -9,14 +9,14 @@ const Graph = (props) => {
     
     useEffect(() => {
     let tempGraphData = props.displayGames.map(game => {
-        return [game.platform, game.globalSales, game.northAmericaSales, game.europeSales, game.japanSales];
+        return [game.name + ' ' + game.platform, game.globalSales, game.northAmericaSales, game.europeSales, game.japanSales];
     });
 
     setGraphData(tempGraphData);
     }, [props.displayGames])
     
-    if (graphData.length >= 8){
-      graphData.length = 8
+    if (graphData.length >= 5){
+      graphData.length = 5
     }
 
     console.log(graphData)
