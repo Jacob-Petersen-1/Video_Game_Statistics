@@ -11,11 +11,14 @@ const DisplayAndSelectData = (props) => {
   const nextPage = ({ selected }) => {
     setPageNumber(selected);
   };
+  const search = props.search
+  const results = games.length;
+    console.log('Games array:', games)
 
   return (
     <div>
       <div>
-        <h2>Search Results:</h2>
+        <h2>Showing {results} Related Results for '{search}':</h2>
       </div>
       <div className="search-container">
         <div className="pagination-container">

@@ -13,6 +13,7 @@ import BestPublisher from "./Components/BestPublisher/BestPublisher";
 function App() {
   const [games, setGames] = useState([]);
   const [displayGames, setDisplayGames] = useState([]);
+  const[search, setSearch] = useState('')
 
   useEffect(() => {
     getAllGames();
@@ -32,9 +33,10 @@ function App() {
         return false;
       }
     });
-
+    setSearch(searchGame);
     setDisplayGames(matchingGames);
     console.log(matchingGames);
+    console.log(searchGame)
   };
 
   return (
@@ -44,7 +46,7 @@ function App() {
         <div className="home-page">
           <div className="search">
             <SearchBar filterGames={filterGames} />
-            <DisplayAndSelectData games={displayGames} />
+            <DisplayAndSelectData games={displayGames} search={search}/>
           </div>
           <h2>Global Sales</h2>
           <div className="search-chart">
