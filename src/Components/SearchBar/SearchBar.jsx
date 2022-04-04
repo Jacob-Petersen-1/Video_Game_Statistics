@@ -18,7 +18,7 @@ const SearchBar = (props) => {
                     value={searchGame} 
                     onChange={(entry) => setSearchGame(entry.target.value)} 
                     type="text" 
-                    placeholder="Search..." 
+                    placeholder=" Search by Game Title, Genre, Publisher..." 
                     className="input"></input>
                     <button type="text" class="submit" className="search-button">Search</button>
             </form>
