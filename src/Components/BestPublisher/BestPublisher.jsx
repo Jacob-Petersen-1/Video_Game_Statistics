@@ -29,7 +29,9 @@ const BestPublisher = (props) => {
             return publisherDataSet
         })
 
-        setPublisherData(publisherGlobalSales)
+        let filteredPublisherGlobalSales = filterBySales(publisherGlobalSales)
+
+        setPublisherData(filteredPublisherGlobalSales)
     }
     
     function formatGraph(dataSet){
@@ -37,10 +39,18 @@ const BestPublisher = (props) => {
             ["publisher", "Global Sales In Millions"],
             ...dataSet.map(data => [data.publisher, data.globalSalesByPublisher])
         ]
+        
+
         return data
     }
     
-    
+    function filterBySales(dataSet){
+        let filteredData = dataSet.filter(function(el){
+            return el.globalSalesByPublisher >= 200;
+        })
+
+        return filteredData
+    }
     
     const options = {
         title: "Best Console Global Sales Since 2013",
