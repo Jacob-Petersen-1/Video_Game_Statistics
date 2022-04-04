@@ -40,17 +40,19 @@ const Graph = (props) => {
       ];
       
        const options = {
-        title: "Sold Per Console",
-        width: 600,
-        height: 400,
-        bar: { groupWidth: "95%" },
-        legend: { position: "none" },
-        
+        title: "Search Results",
+        vAxis: {
+            title: 'Game Title/Platform',
+        },
+        hAxis: {
+            title: 'Sales'
+        }
       };
 
     return (  
         
         <Chart
+        options={options}
         chartType="BarChart"
         width="100%"
         height="400px"

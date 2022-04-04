@@ -45,18 +45,20 @@ const DisplayBestConsole = (props) => {
     
     
     const options = {
-        title: "Best Console Global Sales Since 2013",
-        width: 600,
-        height: 400,
-        bar: { groupWidth: "95%" },
-        legend: { position: "none" },
+        title: "Best Console by Global Sales Since 2013",
+        vAxis: {
+            title: 'Global Sales in Millions',
+        },
+        hAxis: {
+            title: 'Console'
+        }
       };
     
     return ( 
 
         <div>
             {platformData.length > 0 &&
-            <div><Chart chartType='ColumnChart' width='100%' height='300px' data={formatGraph(platformData)}/></div>}
+            <div><Chart options={options} chartType='ColumnChart' width='100%' height='300px' data={formatGraph(platformData)}/></div>}
         </div>
 
     );

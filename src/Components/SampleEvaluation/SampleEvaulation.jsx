@@ -46,11 +46,13 @@ const SampleEvaluation = (props) => {
     
     
     const options = {
-        title: "Best Console Global Sales Since 2013",
-        width: 100,
-        height: 800,
-        bar: { groupWidth: "95%" },
-        legend: { position: "none" },
+        title: "Most Successful Genre by Sales",
+        vAxis: {
+            title: 'Sales in Millions',
+        },
+        hAxis: {
+            title: 'Genre'
+        }
       };
     
     return ( 
@@ -58,6 +60,7 @@ const SampleEvaluation = (props) => {
         <div>
             {genreData.length > 0 &&
             <div><Chart 
+            options={options}
             chartType='ColumnChart' 
             width='100%' 
             height='300px' 

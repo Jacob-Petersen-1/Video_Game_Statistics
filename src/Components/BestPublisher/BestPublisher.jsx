@@ -54,13 +54,11 @@ const BestPublisher = (props) => {
     
     const options = {
         title: "Most Successful Publisher of All Time by Global Sales",
-        scales: {
-            xAxes: [{
-                ticks: {
-                    autoSkip: true,
-                    maxTicksLimit: 10
-                }
-            }]
+        vAxis: {
+            title: 'Global Sales in Millions',
+        },
+        hAxis: {
+            title: 'Publisher'
         }
       };
     
@@ -68,12 +66,14 @@ const BestPublisher = (props) => {
 
         <div>
             {publisherData.length > 0 &&
-            <div><Chart 
+            <div>
+            <Chart 
             options={options}
             chartType='ColumnChart' 
             width='100%' 
             height='300px' 
-            data={formatGraph(publisherData)}/></div>}
+            data={formatGraph(publisherData)}/>
+            </div>}
         </div>
 
     );
