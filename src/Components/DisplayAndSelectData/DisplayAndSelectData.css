@@ -1,19 +1,31 @@
-.search-table th,td,th{
-    padding: .2rem;
-    font-weight: bold;
-    padding: .1rem;
+
+.search-table{
+    display: table-header-group;
+    align-self: center;
 }
+
+.search-table th,td,th{
+    padding-left: 1rem;
+    padding-right: 9rem;
+    font-weight: bold;
+
+}
+
+.search-table th{
+    font-weight: 900;
+}
+
 
 .pagination{
  display: flex;
  flex-direction: row; 
  list-style-type: none;
  font-size: 15px;
- margin-left: 100px; 
+padding: 1rem;
 }
 
 .pagination li{
-    padding:.5rem;
+    
     padding-left: 1rem;
     padding-right: 1rem;
     border: 1px solid black;
@@ -42,4 +54,12 @@ li.next{
     background-color:lightgray;
 }
 
+.search-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.pagination-container{
+    align-self: center;
+}
 
