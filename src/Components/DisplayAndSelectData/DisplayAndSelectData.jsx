@@ -43,16 +43,18 @@ const DisplayAndSelectData = (props) => {
                     })}
                 </tbody>
             </table>
-            <div className="paginate-container">
-                <ReactPaginate 
+                <div><ReactPaginate 
+                className="pagination"
                 previousLabel="Previous" 
                 nextLabel="Next" 
                 pageCount={page} 
                 onPageChange={nextPage}
                 />
+                </div>
 
-            </div>
+
         </div>
+        
      );
 }
  

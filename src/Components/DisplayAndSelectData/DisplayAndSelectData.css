@@ -3,3 +3,43 @@
     font-weight: bold;
     padding: .1rem;
 }
+
+.pagination{
+ display: flex;
+ flex-direction: row; 
+ list-style-type: none;
+ font-size: 15px;
+ margin-left: 100px; 
+}
+
+.pagination li{
+    padding:.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid black;
+    font-weight: 900;
+    cursor: pointer;
+    background-color: white;
+}
+
+li.selected{
+    background-color: lightgray;
+}
+
+li.previous{
+    background-color: lightblue;
+}
+
+.previous.disabled{
+    background-color: lightgray;
+}
+
+li.next{
+    background-color: lightblue;
+}
+
+.next.disabled{
+    background-color:lightgray;
+}
+
+
