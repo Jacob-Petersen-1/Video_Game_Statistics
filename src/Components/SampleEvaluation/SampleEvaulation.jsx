@@ -19,17 +19,17 @@ const SampleEvaluation = (props) => {
     
     function getGenreSalesData (tempGraphDataGenre){
         const removeDuplicates = tempGraphDataGenre.map(game=>game.genre);
-        const platform = [...new Set(removeDuplicates)]
+        const genre = [...new Set(removeDuplicates)]
 
-        let genreGlobalSales = platform.map(genre=> {
-            let platformDataSet ={
+        let genreGlobalSales = genre.map(genre=> {
+            let genreDataSet ={
                 genre: genre,
                 globalSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.globalSales).reduce((a, b) => a + b, 0),
                 northAmericaSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.northAmericaSales).reduce((a, b) => a + b, 0),
                 europeSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.europeSales).reduce((a, b) => a + b, 0),
                 japanSalesByGenre: tempGraphDataGenre.filter(game=>game.genre === genre).map(game => game.japanSales).reduce((a, b) => a + b, 0)
             }
-            return platformDataSet
+            return genreDataSet
         })
 
         setGenreData(genreGlobalSales)

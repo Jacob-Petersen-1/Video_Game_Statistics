@@ -8,6 +8,7 @@ import DisplayAndSelectData from "./Components/DisplayAndSelectData/DisplayAndSe
 import TopBar from "./Components/TopBar/TopBar";
 import SampleEvaluation from "./Components/SampleEvaluation/SampleEvaulation";
 import Footer from "./Components/Footer/Footer";
+import BestPublisher from "./Components/BestPublisher/BestPublisher";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -57,6 +58,11 @@ function App() {
           <h2> Best Total Global Game Sales Per Genre</h2>
           <div className="bar-chart">
             <SampleEvaluation games={games}/>
+          </div>
+
+          <h2> Most Successful Publisher by Game Sales</h2>
+          <div className="bar-chart">
+            <BestPublisher games={games}/>
           </div>
           <div className="footer">
             <Footer/>
