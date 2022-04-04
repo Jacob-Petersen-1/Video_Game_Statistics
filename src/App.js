@@ -26,7 +26,7 @@ function App() {
 
   const filterGames = (searchGame) => {
     let matchingGames = games.filter((game) => {
-      if (game.name.toLowerCase().includes(searchGame.toLowerCase())) {
+      if (game.name.toLowerCase().includes(searchGame.toLowerCase())||game.platform.toLowerCase().includes(searchGame.toLowerCase())||game.publisher.toLowerCase().includes(searchGame.toLowerCase())||game.genre.toLowerCase().includes(searchGame.toLowerCase())) {
         return true;
       } else {
         return false;
