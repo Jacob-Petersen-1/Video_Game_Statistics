@@ -40,7 +40,7 @@ const Graph = (props) => {
       ];
       
        const options = {
-        title: "Search Results",
+        title: "Global Sales for Search Results",
         vAxis: {
             title: 'Game Title/Platform',
         },

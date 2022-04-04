@@ -48,21 +48,23 @@ function App() {
             <SearchBar filterGames={filterGames} />
             <DisplayAndSelectData games={displayGames} search={search}/>
           </div>
-          <h2>Global Sales</h2>
+          <h2>Search Results</h2>
           <div className="search-chart">
             <Graph displayGames={displayGames} />
           </div>
-          <h2>Best Total Global Game Sales Per Platform Since 2013</h2>
+          <h5>*Only five games are shown at a time to limit degradation of chart readability. If you don't see your title here, try being more specific. You can find it in the table above and then re-search it in the search bar.</h5>
+          
+          <h2>Best Platform for Gaming</h2>
           <div className="bar-chart">
             <DisplayBestConsole games={games} />
           </div>
 
-          <h2>Best Total Global Game Sales Per Genre</h2>
+          <h2>Most Successful Genre by Sales</h2>
           <div className="bar-chart">
             <SampleEvaluation games={games}/>
           </div>
 
-          <h2>Most Successful Publisher by Global Sales</h2>
+          <h2>Most Successful Publisher of All Time</h2>
           <div className="bar-chart">
             <BestPublisher games={games}/>
           </div>

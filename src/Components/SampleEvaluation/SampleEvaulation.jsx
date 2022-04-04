@@ -46,7 +46,7 @@ const SampleEvaluation = (props) => {
     
     
     const options = {
-        title: "Most Successful Genre by Sales",
+        title: "Most Successful Genre by Global Sales Compared in North America, Europe, and Japan",
         vAxis: {
             title: 'Sales in Millions',
         },
