@@ -35,8 +35,6 @@ function App() {
     });
     setSearch(searchGame);
     setDisplayGames(matchingGames);
-    console.log(matchingGames);
-    console.log(searchGame)
   };
 
   return (
@@ -58,16 +56,25 @@ function App() {
           <div className="bar-chart">
             <DisplayBestConsole games={games} />
           </div>
+          <h5>According to our data, since 2013 the best platform for investing/creating games on based on sales is the PS4.</h5>
+          <h5>The PS4 leads the second most popular platform, the PS3, by approximately $89,000,000 globally.</h5>
+          <h5>The two top platforms in the gaming industry are owned by the same company, Sony, which could be a substantial boon for investors looking to capitalize on the market when considering the fact that many games on the PS3 are ported to the PS4.</h5>
+          <h5>It is important to note that these numbers may not accurately reflect the best console of choice when the next generation consoles become available to consumers.</h5>
 
           <h2>Most Successful Genre by Sales</h2>
           <div className="bar-chart">
             <SampleEvaluation games={games}/>
           </div>
+          <h5>According to our data, the best genre for investing/creating games based on sales are Action games.</h5>
+          <h5>Action games lead the second most popular genre, Sports, by approximately $414,000,000 globally.</h5>
+          <h5>The only two genres to have more sales in Japan than any other region were Role-Playing and Puzzle games. All other genres follow the same trend of having the most sales in North America, followed by Europe, and then Japan.</h5>
 
           <h2>Most Successful Publisher of All Time</h2>
           <div className="bar-chart">
             <BestPublisher games={games}/>
           </div>
+          <h5>According to our data, the best publisher for investing/creating games with based on sales is Nintendo.</h5>
+          <h5>Nintendo leads its closest competition, Electronic Arts, by approximately $691,000,000 globally.</h5>
           <div className="footer">
             <Footer/>
           </div>
