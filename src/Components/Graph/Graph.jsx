@@ -14,6 +14,10 @@ const Graph = (props) => {
 
     setGraphData(tempGraphData);
     }, [props.displayGames])
+    
+    if (graphData.length >= 8){
+      graphData.length = 8
+    }
 
     console.log(graphData)
 
@@ -41,6 +45,7 @@ const Graph = (props) => {
         height: 400,
         bar: { groupWidth: "95%" },
         legend: { position: "none" },
+        
       };
 
     return (  

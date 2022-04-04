@@ -60,7 +60,7 @@ function App() {
             <SampleEvaluation games={games}/>
           </div>
 
-          <h2> Most Successful Publisher by Game Sales</h2>
+          <h2> Most Successful Publisher by Global Sales</h2>
           <div className="bar-chart">
             <BestPublisher games={games}/>
           </div>

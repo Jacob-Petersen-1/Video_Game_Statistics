@@ -53,11 +53,15 @@ const BestPublisher = (props) => {
     }
     
     const options = {
-        title: "Best Console Global Sales Since 2013",
-        width: 100,
-        height: 800,
-        bar: { groupWidth: "95%" },
-        legend: { position: "none" },
+        title: "Most Successful Publisher of All Time by Global Sales",
+        scales: {
+            xAxes: [{
+                ticks: {
+                    autoSkip: true,
+                    maxTicksLimit: 10
+                }
+            }]
+        }
       };
     
     return ( 
@@ -65,6 +69,7 @@ const BestPublisher = (props) => {
         <div>
             {publisherData.length > 0 &&
             <div><Chart 
+            options={options}
             chartType='ColumnChart' 
             width='100%' 
             height='300px' 
