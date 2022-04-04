@@ -1,8 +1,27 @@
 .searchbar-container{
+    font-size: 15px; 
+    padding:.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-top: 20px;
     margin-left: 5px;
+    
 }
 
 .input{
     width: 15%;
+    height: 30px;
+    font-size: 15px;
 }
+
+button{
+    margin-left: 1rem;
+    font-size: 15px; 
+    padding:.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid black;
+    font-weight: 900;
+    cursor: pointer;
+    background-color: white;
+   }
